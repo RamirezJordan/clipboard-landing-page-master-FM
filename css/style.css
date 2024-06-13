@@ -1,0 +1,278 @@
+:root {
+    /* Primary Colors */
+    --White: hsl(0, 0%, 100%);
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+
+    /* Neutral Colors */
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+    --Gray: #f5f6f8;
+
+    /* Fonts */
+    --Bai-Jamjure-font: "Bai Jamjuree", sans-serif;
+}
+
+/* Globals */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--Bai-Jamjure-font);
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--Dark-Grayish-Blue);
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    color: var(--Grayish-Blue);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilities */
+.w-90 {
+    width: 90%;
+}
+
+.m-2 {
+    margin: 0 2rem;
+}
+
+.m-t-5 {
+    margin-top: 5rem;
+}
+
+.m-b-15 {
+    margin-bottom: 15rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    .center-content {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+/*  Header */
+
+.header__bg {
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 30rem;
+}
+
+.header__logo {
+    margin: 10rem 0;
+}
+
+.header__buttons {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Header For Desktop*/
+@media (min-width: 768px) {
+    .header__bg {
+        background-image: url(/images/bg-header-desktop.png);
+    }
+
+    .header__buttons {
+        flex-direction: row;
+    }
+
+    .button {
+        padding: 1.5rem 7rem;
+    }
+}
+
+/* Buttons */
+.button {
+    cursor: pointer;
+    padding: 1.5rem 10rem;
+    color: var(--White);
+    font-weight: 600;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.31);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button--ios {
+    background-color: var(--Strong-Cyan);
+}
+
+.button--mac {
+    background-color: var(--Light-Blue);
+}
+
+/* Section 1 - Image & list */
+@media (min-width: 769px) {
+    .image-list-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 4rem;
+    }
+
+    .image-list-section__img {
+        margin-left: -10rem;
+    }
+
+    .image-list-section__list {
+        max-width: 40rem;
+        margin: 5rem 10rem;
+    }
+
+    .image-list-section__list p,
+    .image-list-section__list h3 {
+        text-align: left;
+    }
+}
+
+/* Section 2 - Image */
+.section-2__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 3 - Tools */
+.tool img {
+    margin: 5rem 0;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 769px) {
+    .tools {
+        margin: 0 15rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Section 4 - Brands*/
+.brands {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+@media (min-width: 769px) {
+    .brands {
+        margin: 0 15rem;
+        flex-direction: row;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--Gray);
+}
+
+.footer a {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.footer__logo {
+    width: 5rem;
+    margin-top: 5rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+.social-media a {
+    font-size: 3rem;
+}
+
+.links a:hover,
+.social-media a:hover {
+    color: var(--Strong-Cyan);
+}
+
+.social-media,
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
