@@ -34,7 +34,17 @@ a {
     text-decoration: none;
     color: var(--Grayish-Blue);
 }
+h1 {
+    font-size: 3.8rem;
+}
 
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
 h1,
 h2,
 h3,
@@ -79,7 +89,6 @@ img {
     align-items: center;
 }
 
-
 @media (min-width: 768px) {
     .center-content {
         max-width: 60rem;
@@ -101,6 +110,10 @@ img {
     margin: 10rem 0;
 }
 
+.header__title {
+    margin-bottom: 2rem;
+}
+
 .header__buttons {
     margin: 5rem 0;
     display: flex;
@@ -108,21 +121,6 @@ img {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}
-
-/* Header For Desktop*/
-@media (min-width: 768px) {
-    .header__bg {
-        background-image: url(/images/bg-header-desktop.png);
-    }
-
-    .header__buttons {
-        flex-direction: row;
-    }
-
-    .button {
-        padding: 1.5rem 7rem;
-    }
 }
 
 /* Buttons */
@@ -148,7 +146,26 @@ img {
     background-color: var(--Light-Blue);
 }
 
+/* Header For Desktop*/
+@media (min-width: 768px) {
+    .header__bg {
+        background-image: url(/images/bg-header-desktop.png);
+    }
+
+    .header__buttons {
+        flex-direction: row;
+    }
+
+    .button {
+        padding: 1.5rem 4rem;
+    }
+}
+
 /* Section 1 - Image & list */
+.image-list-section__list p {
+    margin-bottom: 5rem;
+}
+
 @media (min-width: 769px) {
     .image-list-section {
         display: flex;
